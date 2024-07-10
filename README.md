@@ -1,1 +1,4 @@
-# Sprint 7 project
+# Jason Reed-Glover 
+Sprint 7 Project. 
+
+In this project, I verified that the API endpoints behave as expected for endpoints Get, Put, Post, & Delete. With these tests, we want to ensure the terminal extracts important data for our test cases. I did this by making an HTTP request with JavaScript, extracting the status code from the response object, and then comparing it to the expected status code using the expect function and matcher. To extract the status code from the response object, I referred to the status field. GitHub was used to run the test. Before starting the first test, I ran the npm install to the project folder. API docs and API swagger were used as references. Once all tests were completed, the command “npx jest” was run last to ensure all tests passed as expected and no errors were found.
