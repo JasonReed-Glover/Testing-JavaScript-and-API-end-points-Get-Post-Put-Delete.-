@@ -30,8 +30,6 @@ test('status should be 200', async () => {
 			body: JSON.stringify(requestBody)
 		});
 		actualStatus = response.status;
-		//const data = await response.json();
-       // console.log(actualStatus);
 	} catch (error) {
 		console.error(error);
 	}
@@ -39,23 +37,8 @@ test('status should be 200', async () => {
 });
 
 
-const requestBody2 = {
-    "products": [
-        {
-            "id": 1,
-            "quantity": 3
-        },
-        {
-            "id": 4,
-            "quantity": 1
-        },
-        {
-            "id": 9,
-            "quantity": 3
-        }
-    ],
-	"deliveryTime": 7
-}
+
+
 
 test('the Speedy delivery price is 7 for the second test', async () => {
 	let actualStatus;
@@ -66,14 +49,12 @@ test('the Speedy delivery price is 7 for the second test', async () => {
 			headers: {
 			'Content-Type': 'application/json'
 			},
-			body: JSON.stringify(requestBody2)
+			body: JSON.stringify(requestBody)
 		});
 		actualStatus = response.status;
 
-        //console.log(actualStatus);
 
 		data = await response.json();
-		//console.log(data)
 	} catch (error) {
 		console.error(error);
 	}

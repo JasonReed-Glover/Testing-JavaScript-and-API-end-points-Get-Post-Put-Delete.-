@@ -8,7 +8,6 @@ test('check response code 200', async () => {
 			method: 'DELETE',
 		});
 		 actualStatus = response.status;
-        //console.log(actualStatus);
 	} catch (error) {
 		console.error(error);
 	}
@@ -24,7 +23,6 @@ test('check if deleted kit returns ok:true', async () => {
 		 });
 		 const data = await response.json();
 		 body_response = data.ok
-		 //console.log(body_response);
 	 } catch (error) {
 		 console.error(error);
 	 }

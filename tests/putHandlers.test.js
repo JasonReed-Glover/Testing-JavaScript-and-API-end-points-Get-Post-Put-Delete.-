@@ -16,8 +16,7 @@ test('status should be 200', async () => {
 			body: JSON.stringify(requestBody)
 		});
 		actualStatus = response.status;
-		//const data = await response.json();
-       // console.log(actualStatus);
+		
 	} catch (error) {
 		console.error(error);
 	}
@@ -36,7 +35,6 @@ test('verify ok true', async () => {
 		});
 		const data = await response.json();
 		body = data.ok
-        //console.log(actualStatus);
 	} catch (error) {
 		console.error(error);
 	}
