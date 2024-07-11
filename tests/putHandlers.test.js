@@ -5,7 +5,7 @@ const requestBody = {
 	"price": 17
 }
 
-test('status should be 200', async () => {
+test('Should have response code 200 when modifying product information', async () => {
    let actualStatus
 	try {
 		const response = await fetch(`${config.API_URL}/api/v1/products/7`, {
@@ -23,7 +23,7 @@ test('status should be 200', async () => {
 	expect(actualStatus).toBe(200);
 });
 
-test('verify ok true', async () => {
+test('should return ok true when modifying product information', async () => {
    let body
 	try {
 		const response = await fetch(`${config.API_URL}/api/v1/products/4`, {

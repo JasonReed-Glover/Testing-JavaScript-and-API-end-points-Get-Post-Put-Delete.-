@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-undef
 const config = require('../config');
 
-test('check response code 200', async () => {
+test('Should have response code 200 when deleting a kit', async () => {
    let actualStatus;
 	try {
 		const response = await fetch(`${config.API_URL}/api/v1/kits/4`, {
@@ -15,7 +15,7 @@ test('check response code 200', async () => {
 });
 
 
-test('check if deleted kit returns ok:true', async () => {
+test('should return ok: true when deleting a kit', async () => {
 	let body_response;
 	 try {
 		 const response = await fetch(`${config.API_URL}/api/v1/kits/3`, {

@@ -19,7 +19,7 @@ const requestBody = {
 	"deliveryTime": 7
 }
 
-test('status should be 200', async () => {
+test('Should have response code 200 when checking delivery availibility and price', async () => {
 	let actualStatus;
 	try {
 		const response = await fetch(`${config.API_URL}/api/v1/couriers/check`, {
@@ -40,9 +40,8 @@ test('status should be 200', async () => {
 
 
 
-test('the Speedy delivery price is 7 for the second test', async () => {
-	let actualStatus;
-	let data;
+test(' Should have the Speedy delivery price be 7 when checking delivery price', async () => {
+	let deliveryPrice;
 	try {
 		const response = await fetch(`${config.API_URL}/api/v1/couriers/check`, {
 			method: 'POST',
@@ -51,15 +50,11 @@ test('the Speedy delivery price is 7 for the second test', async () => {
 			},
 			body: JSON.stringify(requestBody)
 		});
-		actualStatus = response.status;
-
-
-		data = await response.json();
+		const data = await response.json();
+		 deliveryPrice = data.Speedy.deliveryPrice;
 	} catch (error) {
 		console.error(error);
 	}
-        const deliveryPrice = data.Speedy.deliveryPrice;
-
-        expect(deliveryPrice).toBe(7);
+     expect(deliveryPrice).toBe(7);
 
 });
